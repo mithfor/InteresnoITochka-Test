@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		88B2671E2E5ED76700E3D6A9 /* InteresnoITochka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteresnoITochka.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88B2671E2E5ED76700E3D6A9 /* InteresnoITochka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = InteresnoITochka.app; path = "/Users/dmitriivoronin/Develop/Tests/InteresnoITochka/build/Debug-iphoneos/InteresnoITochka.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,6 @@
 		88B2671F2E5ED76700E3D6A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				88B2671E2E5ED76700E3D6A9 /* InteresnoITochka.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
