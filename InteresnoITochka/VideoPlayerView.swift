@@ -46,19 +46,19 @@ struct VideoPlayerView: View {
             .onAppear(perform: {
 //                play()
             })
-            .onChange(of: geo.frame(in: .global).midY) { _, newValue in
-                let screenHeight = UIScreen.main.bounds.height
-                
-                var isVisible: Bool {
-                    abs(newValue - screenHeight / 2) < screenHeight / 2
-                }
-                
-                if isVisible && isPlaying {
-//                    play()
-                } else if !isVisible && isPlaying {
-                    pause()
-                }
-            }
+//            .onChange(of: geo.frame(in: .global).midY) { _, newValue in
+//                let screenHeight = UIScreen.main.bounds.height
+//                
+//                var isVisible: Bool {
+//                    abs(newValue - screenHeight / 2) < screenHeight / 2
+//                }
+//                
+//                if isVisible && isPlaying {
+////                    play()
+//                } else if !isVisible && isPlaying {
+//                    pause()
+//                }
+//            }
         }
     }
 //    
