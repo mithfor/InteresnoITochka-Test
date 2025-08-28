@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		88B2671E2E5ED76700E3D6A9 /* InteresnoITochka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = InteresnoITochka.app; path = "/Users/dmitriivoronin/Develop/Tests/InteresnoITochka/build/Debug-iphoneos/InteresnoITochka.app"; sourceTree = "<absolute>"; };
+		883023A72E60084D0023A107 /* InteresnoITochka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteresnoITochka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,6 +40,7 @@
 		88B2671F2E5ED76700E3D6A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				883023A72E60084D0023A107 /* InteresnoITochka.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,7 +67,7 @@
 			packageProductDependencies = (
 			);
 			productName = InteresnoITochka;
-			productReference = 88B2671E2E5ED76700E3D6A9 /* InteresnoITochka.app */;
+			productReference = 883023A72E60084D0023A107 /* InteresnoITochka.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -259,6 +260,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -288,6 +290,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
