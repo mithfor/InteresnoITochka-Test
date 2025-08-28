@@ -17,23 +17,34 @@ struct VideoPlayerView: View {
     init(video: Video) {
         self.video = video
         
-        _viewModel = StateObject(wrappedValue: VideoPlayerViewModel(url: video.url))
+        _viewModel = StateObject(wrappedValue: VideoPlayerViewModel(video: video))
     }
     
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .bottom) {
-                VideoPlayer(player: viewModel.player)
-                    .frame(width: UIScreen.main.bounds.width,
-                           height: UIScreen.main.bounds.height)
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-                
-//                OverlayedTextView(videoTitle: video.title)
+                if let player = viewModel.player {
+                    VideoPlayer(player: viewModel.player)
+                        .frame(width: UIScreen.main.bounds.width,
+                               height: UIScreen.main.bounds.height)
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    //                OverlayedTextView(videoTitle: video.title)
+                } else {
+                    Rectangle()
+                        .fill(Color.gray.opacity(0.3))
+                        .frame(height: 200)
+                        .cornerRadius(12)
+                        .overlay {
+                            ProgressView()
+                                .scaleEffect(1.5)
+                        }
+                }
                 
             }
             .onAppear(perform: {
-                play()
+//                play()
             })
             .onChange(of: geo.frame(in: .global).midY) { _, newValue in
                 let screenHeight = UIScreen.main.bounds.height
@@ -43,21 +54,21 @@ struct VideoPlayerView: View {
                 }
                 
                 if isVisible && isPlaying {
-                    play()
+//                    play()
                 } else if !isVisible && isPlaying {
                     pause()
                 }
             }
         }
     }
-    
-    private func play() {
-        viewModel.player.play()
-        isPlaying = true
-    }
-    
-    private func pause() {
-        viewModel.player.pause()
-        isPlaying = false
-    }
+//    
+//    private func play() {
+//        viewModel.play()
+//        isPlaying = true
+//    }
+//    
+//    private func pause() {
+//        viewModel.pause()
+//        isPlaying = false
+//    }
 }
