@@ -8,7 +8,8 @@ import SwiftUI
 import AVKit
 import Combine
 
-class VideoPlayerViewModel: ObservableObject {
+// TODO: Fix MainActor behavior in Swift 6
+final class VideoPlayerViewModel: ObservableObject {
     @Published var player: AVPlayer?
     @Published var isPlaying = false
     @Published var showControls = false
@@ -32,6 +33,31 @@ class VideoPlayerViewModel: ObservableObject {
     
     deinit {
         cleanup()
+    }
+    
+    // MARK: - Public methods
+    
+    func togglePlayPause() {
+        guard let player = player else { return }
+        
+        if player.rate == 0 {
+            play()
+        } else {
+            pause()
+        }
+    }
+    
+    func toggleMute() {
+        isMuted.toggle()
+        player?.isMuted = isMuted
+    }
+    
+    func toggleControls() {
+        showControls.toggle()
+    }
+    
+    func seek(to time: Double) {
+        player?.seek(to: CMTime(seconds: time, preferredTimescale: 1000))
     }
     
     // MARK: - Private methods
